@@ -5,16 +5,11 @@
 //  Created by Brandon  Shoop on 8/19/21.
 //
 
-#import "MyCustomView.h"
+#import <React/RCTViewManager.h>
+ 
+@interface RCT_EXTERN_MODULE(RCTMyCustomViewManager, RCTViewManager)
 
-@implementation MyCustomView
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
+RCT_EXPORT_VIEW_PROPERTY(status, BOOL)
+RCT_EXPORT_VIEW_PROPERTY(onClick, RCTBubblingEventBlock)
+ 
 @end
